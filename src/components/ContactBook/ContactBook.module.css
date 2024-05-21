@@ -1,0 +1,33 @@
+
+
+.contactContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 150px;
+    gap: 10px;
+    border: 1px solid gray;
+   margin-left: 70px;
+}
+
+.labelContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: rgb(3, 2, 1);
+}
+
+input{
+    width: 150px;
+    padding: 2px 3px;
+}
+
+h2{
+    text-align: center;
+}
+
+.addButton:hover{
+    color: rgb(178, 177, 138);
+    cursor: pointer;
+}

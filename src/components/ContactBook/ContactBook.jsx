@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from '../../redux/phoneSlice';
+import style from './ContactBook.module.css';
 
 const ContactBook = () => {
   const [name, setName] = useState('');
@@ -21,8 +22,8 @@ const ContactBook = () => {
     
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <label>
+      <form onSubmit={handleSubmit} className={style.contactContainer}>
+        <label className={style.labelContainer}>
           Name:
           <input
             type="text"
@@ -33,7 +34,7 @@ const ContactBook = () => {
                       onChange={(e) => setName(e.target.value) }
           />
         </label>
-        <label>
+        <label className={style.labelContainer}>
           Number:
           <input
             type="tel"
@@ -44,7 +45,7 @@ const ContactBook = () => {
                       onChange={(e) => setNumber(e.target.value)}
           />
               </label>
-              <button type='submit' >Add contact</button>
+              <button type='submit' className={style.addButton} >Add contact</button>
       </form>
     </div>
   );
